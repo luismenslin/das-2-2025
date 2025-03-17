@@ -116,4 +116,34 @@ Banco de dados não relacionais não fazem normalização, abrem mão do espaço
 **Segurança**
 - Utilizar mais de uma ferramenta de segurança.
 - Usar o princípio do privilégio mínimo.
+- 
+## Aula 13/03/2024
+
+### Permissões de usuário para acesso aos recursos
+3 pilares da autenticação:
+- Usuário e senha.
+- Biometria / Face ID.
+- Dispositivo móvel.
+
+### Autorização
+- O que é permitido pelo papel do usuário.
+- IAM
+
+### Conta
+Cada conta possui um código único de 12 dígitos que identifica aquela conta.
+
+### IAM
+É responsável pelo gerenciamento de:
+- Grupos de Usuário
+- Usuários
+- Funções (Roles)
+- Políticas
+
+Funções possuem políticas vinculadas a ela.
+
+### Acesso via Console x Acesso Programático
+- Acesso via console
+- Acesso via AWS CLI, AWS SDK, API REST
+- Utilizar chave programática para utilizar a sua credencial
+
 
