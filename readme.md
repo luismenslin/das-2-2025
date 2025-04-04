@@ -1,8 +1,8 @@
-##DAS 2
+## DAS 2
 
 Luis Felipe Menslin
 
-##27/02/2025
+## 27/02/2025
 Trade-offs
 
 Resultado da escolha de ferramentas necessarias para um projeto;
@@ -53,7 +53,7 @@ Tratar recursos todos como descartaveis
  Recursos que podem ser facilmente substituidos;
  Substituição de recursos mais antigos automaticamente devido a descartabilidade
 
-##06/03 
+## 06/03 
 
 automatizar o provisionamento das máquinas, infra como código.
 não tratar dados como algo único sempre, manter opções de backup para restabekecer o sistema mais rapimento.
@@ -88,7 +88,7 @@ pequenas AZs dentro de outros lugares.
 WAVELength 5g rodar serviços da AWS em operadoras de telefonia evitando gargalos nas redes normais de internet
 colado no 5g
 
-##10/03 
+## 10/03 
 
 todas as regiões da aws tem 3 azs algumas tem mais, Az são datacenters
 
@@ -131,7 +131,7 @@ principio do privilegio minimo
 
 sempre use criptografia entre as contas
 
-##13/03 
+## 13/03 
 
 Modelo de responsabilidade compartilhada
 Principio de Privilegio minimo
@@ -148,7 +148,7 @@ credenciais acess key e acess passoword são de longas duração a menos que alg
 usuario ROOT não tem limite do que pode fazer. 
 Roles: são mudanças de autorização e negação de outras para acesso em outras partes do sistema
 
-##17/03
+## 17/03
 
 RBAC  ROle base acess Control são mecanimos de controle, permissões de banco.
 polices de itendidade são dadas pelo Root feito pelo IAM
@@ -166,7 +166,7 @@ todo objeto s3 tem uma URL global e unica.
 
 policy de identidade
 
-##24/03
+## 24/03
 
 pessoas que lhedam com s3 precisa de preocuiiapr com limite de espaço. Lifecycle
 impactando no custo pq os clientes precisam ter espaço, jeitos de economizar apagar o que precisa ou ajustar as classes de armazenamento ( que tb é pago)
@@ -178,7 +178,7 @@ não é possível editar um arquivo dentro do s3.
 o que é cors
 validação proteção pros seus arquivos no s3
 
-##27/03
+## 27/03
 cuidar para não expor bucket para internet
 uso de criptografia
 SSE-S3
@@ -190,7 +190,7 @@ ou vc pode tornar totalmente publico exemplo um site.
 batch operation vc faz copia de arquivos para outro balde escolhendo quais vc quer ver, pois pode haver muitos arquivos para listar de uma unica vez
 
 
-##03/04
+## 03/04
 EC2
 ma nuvem vc tem multiplas maneira de ordar algo dentro dela, pode usar o ec2 para rodar uma maquina direta no hardware
 ELastic COmpute Cloud, é o segundo serviço da AWS, servidores para rodar na nuvem
