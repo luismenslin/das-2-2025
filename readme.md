@@ -213,3 +213,38 @@ File Share EFS ou FSX
 EFS sistema de file share  LINUX. por causa do protocolo v4
 pago apenas pelo que se usa de armazenamento
 FSX pode ser usado com o wins por causa do protolo suportado dele.
+
+## 07/04
+EBS hd do servidor
+
+Regiões são compostas por Az ao menos 3, HPC seria uma solução aonde as maquinas ficam super juntas no caso um Cluster para processar coisas pesadas, se possivuel na mesma maquina
+ou no mesmo hack fisico a fim de reduzir a latencia, alta disponibilidade, 
+Spread é espalhando criando alta disponobilidade mas reduz latencia e velocidade
+partition - apacbe kafka , cassandra, spark, todas elas fazedm processamento de dados ou streamer, sharding os dados n ficam em um unico servidor, a ferrramenta espalha em varios
+servidores, mas que eles fiquem proximos, meio termo entre o cluster e o spread, usando um dos soft ja listado no exemplo.
+EC2
+
+on-demand paga por hora usada
+reserved insta eu digo o que vou usuar e uso só aquilo, uma forma de compromisso, exemplo servidor tal masquina tal sistema etc mas apenas isso por um tempo determinado.
+se pagar adiantado tem muito mais descontos
+Saving plans - 
+
+amazon ec2 Spot leilão de maquinas comprar partes ociosas de maquinas afin de procurar um desconto bem grande, mas pode acontecer a qualquer momento aws pode vir atras e mandar para de usar
+2 minutos geralmente.
+
+nAo se pode depender de invervenção manual para proteção das maquinas. ( segurança)
+
+## 10/04
+
+BANCO DE DADOS 
+escalabilidade de um banco sempre é um desafio
+quanto de espaço eu preciso
+modelo de dados que vai ser utilziado e latencia
+precisa que suporte qualquer modelo de dados, ja que o banco de dados relacional não tem total suporte 
+na aws tem um serviço chamado RDS feito para subir banco de dados na aws, inclusive pode subir uma maquina e vc mesmo instalar o banco ( serviço não gerenciado) 
+Mas pode ser feito gerenciados tb mundo relacional
+na parte não relacional DynamoDB aonde roda amazon.com
+amazon netpune blockchains são exenmplos disso
+amazon elastic cache copias do banco para resposta mais rapida
+escalabilidade vertical aumenta a maqyina poder
+vertical hozizontal copias do banco
