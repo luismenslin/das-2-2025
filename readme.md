@@ -258,3 +258,101 @@ Chave assimétrica: as chaves que criptografam e descriptografam são diferentes
 DynamoDB: BD NoSQL, serverless, performance de um dígito de milisegundo. Ideal para arquitetura baseada em eventos. Ativo/ativo. Critpografia automática padrão, usa IAM roles para autenticar acesso
 Redshift: BD para data warehouse, para pesquisas pesadas e históricas
 Outros DBs disponibilizados na AWS: DocumentDB, Keyspaces, MemoryDB Neptune, Timestream, Quantum Ledger
+
+## Aula 05/05/2025
+- Início do 2º Bimestre e do módulo de redes na AWS.
+
+- **Amazon VPC (Virtual Private Cloud)**:  
+  Solução de rede virtual baseada em SDN (Software Defined Network) na AWS.  
+  - **Isolamento**: O primeiro nível de isolamento é a conta AWS; o segundo, a rede (VPC).
+  - Permite criar sub-redes, grupos de segurança, ACLs, e controlar todo o tráfego.
+  - Redes em regiões diferentes não se comunicam por padrão.
+  - Cada VPC é restrita à sua região de criação.
+  - **Customização**: CIDR, sub-redes, rotas, ACLs, grupos de segurança, etc.
+  - **VLAN x Sub-rede**:  
+    - VLAN: conecta máquinas em uma mesma rede virtual local.  
+    - Sub-rede: segmento da VPC, conecta máquinas em uma mesma sub-rede.
+  - **Subnet pública**:  
+    - Possui acesso à internet via Internet Gateway.
+    - Recursos podem se comunicar com a internet (entrada e saída).
+    - Exemplos: servidores web, servidores de aplicação.
+    - Internet Gateway: conecta a VPC à internet, vincula-se à tabela de rotas e exige IP público nos recursos.
+
+## Aula 19/05/2025
+- **VPC Peering**:  
+  - Solução simples para conectar duas VPCs (na mesma ou em diferentes regiões).
+  - Permite comunicação direta entre VPCs.
+  - Não exige Transit Gateway.
+  - Limitação: não conecta VPCs em regiões diferentes.
+- **AWS Site-To-Site VPN**:  
+  - Serviço para criar conexão segura entre rede local e VPC.
+  - Utiliza criptografia IPsec.
+  - Principais componentes: Customer Gateway (CGW) e Virtual Private Gateway (VGW).
+  - Alta disponibilidade: dois túneis VPN.
+  - Uso comum: integração de redes corporativas com a nuvem.
+  - Fácil configuração e manutenção.
+  - Baixo custo, pois utiliza a internet pública.
+- **AWS Direct Connect**:  
+  - Conexão dedicada entre data center/local físico e AWS.
+  - Indicado para grandes volumes de dados e integração híbrida.
+  - Cobrança baseada na velocidade da porta e volume de dados transferidos.
+
+## Aula 26/05/2025
+- Início do módulo de segurança na AWS.
+- **IAM Groups**:  
+  - Organiza usuários IAM em grupos com permissões semelhantes.
+  - Facilita o gerenciamento de permissões em larga escala.
+  - Ideal para equipes, projetos ou departamentos.
+  - Criação envolve definir políticas e adicionar membros.
+  - Serviço gratuito, parte do IAM.
+- **AWS IAM Roles**:  
+  - Identidades com permissões temporárias para acesso seguro a recursos AWS.
+  - Usadas por serviços AWS (EC2, Lambda) ou aplicações externas.
+  - Evita compartilhamento de credenciais permanentes.
+- **AWS Cognito**:  
+  - Gerencia autenticação e autorização de usuários em aplicações web e mobile.
+  - Recursos: registro, login, MFA, integração com provedores sociais.
+  - Indicado para apps que exigem autenticação de usuários.
+  - Segurança: criptografia de dados e suporte a MFA.
+  - Configuração: criação de user pool, definição de políticas e provedores.
+  - Cobrança baseada em usuários ativos mensais e operações.
+
+## Aula 29/05/2025
+- Continuação do módulo de segurança.
+- **Teorema CAP**:  
+  - Consistência: todos os nós têm a mesma visão dos dados.
+  - Disponibilidade: todos os nós respondem a requisições.
+  - Tolerância a partições: sistema opera mesmo com falhas de rede.
+  - Não é possível garantir os três ao mesmo tempo; é preciso priorizar dois.
+  - Exemplo: bancos relacionais priorizam consistência e disponibilidade; NoSQL, disponibilidade e tolerância a partições.
+- **Amazon Inspector**:  
+  - Avalia a segurança de instâncias EC2 e contêineres.
+  - Realiza varreduras de vulnerabilidades e gera relatórios.
+  - Sugere correções e pode ser integrado ao AWS Security Hub.
+- **Amazon Detective**:  
+  - Analisa e investiga eventos de segurança.
+  - Identifica padrões suspeitos na conta AWS.
+- **AWS Security Hub**:  
+  - Centraliza informações de segurança de vários serviços AWS.
+  - Permite visualização e gerenciamento centralizados.
+  - Integra-se com outros serviços de segurança (GuardDuty, Inspector, etc.).
+  - Permite criação de painéis personalizados.
+
+## Aula 02/06/2025
+- Início do módulo de monitoramento.
+- **Monitoramento de aplicações**:
+  - **Objetivos**:
+    - Garantir saúde operacional dos serviços.
+    - Monitorar desempenho e uso eficiente dos recursos.
+    - Avaliar performance e tempo de resposta das aplicações.
+    - Verificar aspectos de segurança operacional.
+  - **Amazon CloudWatch**:
+    - Serviço de monitoramento para coleta e visualização de métricas e logs.
+    - Métricas: gráficos de desempenho (CPU, memória, disco, etc.).
+    - Logs são cobrados à parte.
+    - Possibilidade de criar métricas personalizadas (serviço pago).
+    - Permite configurar alarmes para eventos específicos.
+  - **Event Bridge**:
+    - Serviço de eventos para criar regras e acionar ações automáticas.
+    - Integração com Lambda, SNS, SQS e outros serviços AWS.
+    - Permite automação baseada em eventos e métricas.
