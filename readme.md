@@ -356,3 +356,27 @@ Outros DBs disponibilizados na AWS: DocumentDB, Keyspaces, MemoryDB Neptune, Tim
     - Serviço de eventos para criar regras e acionar ações automáticas.
     - Integração com Lambda, SNS, SQS e outros serviços AWS.
     - Permite automação baseada em eventos e métricas.
+
+## Aula 16/06
+
+**Load Balancer**
+O Load Balancer (Balanceador de Carga) é um recurso que distribui automaticamente o tráfego de rede entre múltiplas instâncias de servidores, melhorando a disponibilidade e a escalabilidade de aplicações. Ele monitora a saúde das instâncias e redireciona o tráfego apenas para aquelas que estão operando normalmente. Existem diferentes tipos de balanceadores, como os baseados em camada 4 (TCP) e camada 7 (HTTP/HTTPS).
+
+**DNS**
+O DNS (Domain Name System) é responsável por traduzir nomes de domínios (como `exemplo.com`) em endereços IP, permitindo que usuários acessem sites e serviços com nomes fáceis de lembrar. Ele funciona como uma "agenda telefônica" da internet. Existem diferentes tipos de registros DNS, como A, CNAME, MX, TXT, entre outros.
+
+## Aula 23/06
+
+**Infraestrutura como Código (IaC)**
+Infraestrutura como Código é uma prática que permite gerenciar e provisionar recursos de infraestrutura por meio de arquivos de configuração, ao invés de processos manuais. Ferramentas como Terraform, AWS CloudFormation e Ansible são exemplos de IaC. Essa abordagem facilita a automação, reprodutibilidade e versionamento da infraestrutura, aumentando a confiabilidade e eficiência dos ambientes de TI.
+
+## Aula 26/06
+
+**Como reduzir o acoplamento das aplicações**
+Reduzir o acoplamento entre aplicações significa diminuir a dependência direta entre seus componentes. Isso pode ser feito por meio de boas práticas como:
+- Uso de APIs para comunicação entre serviços;
+- Aplicação do princípio de responsabilidade única (SRP);
+- Arquitetura baseada em microsserviços;
+- Mensageria assíncrona (como filas e eventos);
+- Inversão de dependência e injeção de dependência.
+Essas práticas aumentam a flexibilidade, facilitam a manutenção e a escalabilidade do sistema.
